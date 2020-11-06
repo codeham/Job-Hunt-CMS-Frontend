@@ -144,7 +144,7 @@ import axios from 'axios';
       submitForm () {
         const requestObj = {company: this.company, position: this.position, city: this.city, state: this.selectState, platform: this.selectJobPlatform, country: this.selectCountry, description: this.description, requirements: this.requirements}
         console.log(this.company);
-        axios.post('http://localhost:8081/cms-storage/testAPI', requestObj).then((response) => {console.log(response)});
+        axios.post('http://localhost:8081/cms-storage/append-job-listing', requestObj).then((response) => {console.log(response)});
       },
       validate () {
         this.$refs.form.validate()
